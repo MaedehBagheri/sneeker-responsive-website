@@ -1,0 +1,390 @@
+@import url("https://fonts.googleapis.com/css2?family=Andika&display=swap");
+*{
+    font-family:'Andika', sans-serif ;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+    text-decoration: none;
+
+}
+
+/* root */
+img{
+    width: 100%;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 18px;
+    transition: 0.5s linear;
+    background-color: white;
+    border-bottom: 2px solid rgb(235, 110, 110);
+}
+
+.logo img{
+    width: 60px;
+}
+.navbar{
+    display: flex;
+}
+
+.navbar a{
+    padding: 8px 17px;
+    color: black;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.navbar a:hover{
+    background-color: rgb(235, 110, 110);
+    border-radius: 0.3rem;
+    transition: 0.2s all linear;
+}
+
+.header-icon{
+    font-size: 22px;
+    cursor: pointer;
+    z-index: 10000;
+    display: flex;
+    column-gap: 0.8rem;
+}
+
+.header-icon .bx:hover{
+    color:rgb(235, 110, 110);
+}
+#menu-icon{
+    font-size: 24px;
+    z-index: 100001;
+    cursor: pointer;
+    display: none;
+}
+#menu-icon:hover{
+    color:rgb(235, 110, 110);
+}
+.search-box{
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 100%;
+}
+
+.search-box input{
+    padding: 20px;
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 1rem;
+    color: black;
+}
+.search-box input::placeholder{
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+section{
+    padding: 50px 100px;
+}
+
+.home{
+
+   display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+    padding: 20px 100px;
+    margin-top: 10rem;
+}
+
+.btn{
+    padding: 5px 10px;
+    border-radius: 0.3rem;
+    background:rgb(235, 110, 110);
+    color: white;
+    font-weight: 500;
+   
+}
+.home-text p{
+    margin-bottom: 2rem;
+}
+
+
+/* about */
+.about{
+   display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,auto));
+    gap: 2rem;
+    
+}
+
+.btn2{
+    background-color: rgb(3, 49, 3);
+    margin-top: 2rem;
+}
+
+.about-text h2{
+font-size: 1.8rem;
+text-transform: uppercase;
+
+
+}
+.about img{
+    border-radius: 5px;
+    width: 300px;
+   
+}
+
+.about-text p{
+    font-size: 0.938rem;
+    margin: 0.5rem 0 1.1rem;
+}
+
+/* products */
+.heading{
+    text-align: center;
+}
+.heading h2{
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+
+.products-container{
+display: grid;
+grid-template-columns: repeat(auto-fit,minmax(280px,auto));
+gap: 1.5rem;
+margin-top: 2rem;
+}
+.products-container .box{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 0.5rem;
+}
+
+.products-container img{
+    /* width: 100%;
+    height: 250px; */
+    object-fit: contain;
+    padding: 20px;
+    background-color: white;
+    border-radius: 0.5rem;
+}
+
+.products-container .box h3{
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0.5rem 0 0.5rem;
+}
+
+.products-container .box .content{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.products-container .box .content span{
+    padding: 0 1rem;
+    color: black;
+    background: gray;
+    border-radius: 4px ;
+    font-weight: 500;
+}
+
+.products-container .box .content a{
+    padding: 0 1rem;
+    color: black;
+ border: 2px solid gray;
+    border-radius: 4px ;
+    font-weight: 500;
+}
+
+.products-container .box .content a:hover{
+    background-color: gray;
+    color: white;
+}
+
+/* customers */
+
+.customers-container{
+    display: grid;
+grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+gap: 1.5rem;
+margin-top: 2rem;
+}
+
+.customers-container .box{
+    padding: 20px;
+    border-radius: 0.5rem;
+    text-align: center;
+    box-shadow: 0 4px 41px rgb(14 55  54 /14%);
+}
+
+.stars .bx{
+    color: rgb(255, 217, 0);
+}
+.customers-container .box p{
+    font-size: 0.938rem;
+}
+
+.customers-container .box h2{
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0.5rem 0 0.5rem;
+}
+
+.customers-container .box img{
+width: 70px;
+height: 70px;
+border-radius: 50%;
+object-fit: cover;
+}
+
+.customers-container .box:hover{
+    transition: 0.2s all linear;
+    background:rgb(212, 210, 210) ;
+}
+
+.footer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+    gap: 1.5rem;
+}
+
+.footer-box h2{
+font-size: 1.2rem;
+font-weight: 600;
+margin-bottom: 10px;
+}
+
+.footer-box p{
+    font-size: 0.938rem;
+    margin-bottom: 10px;
+}
+
+.social{
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+}
+
+.social a .bx{
+    font-size: 24px;
+    color: black;
+    padding: 10px;
+    background-color: rgb(212, 210, 210);
+    border-radius: 0.2rem;
+}
+
+.social a .bx:hover{
+    background-color: gray;
+
+}
+
+.footer-box h3{
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.footer-box li a{
+    color: black;
+}
+.footer-box li a:hover{
+color:rgb(235, 110, 110);
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+}
+
+.contact span{
+    display: flex;
+    align-items: center;
+}
+
+.contact i{
+    font-size: 20px;
+    margin-right: 1rem;
+}
+
+
+@media (max-width:1058px){
+    header{
+        padding: 16px 60px;
+    }
+    section{
+        padding:50px 60px;
+    }
+
+}
+
+@media (max-width:991px){
+    header{
+        padding: 16px 4%;
+    }
+    section{
+        padding:50px 4%;
+    }
+
+}
+
+@media (max-width:768px){
+    header{
+padding: 12px 4%;
+    }
+    #menu-icon{
+        display: initial;
+    }
+    .navbar{
+        position: absolute;
+        top: -570px;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background:rgb(235, 147, 147) ;
+        color: white;
+        row-gap: 1.4rem;
+        padding: 20px;
+        transition: 0.3s;
+        text-align: center;
+    }
+    .navbar a:hover{
+        background-color: #fff;
+    }
+
+    .navbar.active{
+        top: 100%;
+    }
+}
+
+@media (max-width:360px){
+    .home{
+        padding: 50px 4%;
+    }
+    .about{
+        padding: 50px 4%;
+    }
+    .about img{
+width: 280px;
+
+    }
+    
+}
+@media (max-width:605px) {
+    .about{
+        gap: 5rem;
+    }
+}
